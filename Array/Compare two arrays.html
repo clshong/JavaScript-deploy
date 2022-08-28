@@ -5,6 +5,17 @@
     <title>比较两个数组</title>
 </head>
 <body>
+<script>
+    function fn(a,b) {
+      // 转成字符串在做比较
+      // return   JSON.stringify(a) === JSON.stringify(b)
+      // or
+      //  !! boolean型取反
+      //  看数组长度是否一样 并且
+        return !!(a.length === b.length && a.every((value, index) => value === b[index]))
+    }
 
+    console.log(fn([1,2,5],[1,2,5]))
+</script>
 </body>
 </html>

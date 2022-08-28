@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>将对象数组转换为单个对象</title>
+</head>
+<body>
+<script>
+  const toObject = function (arr,key) {
+   //扩展数组，展开回调，id的索引，定义格式
+   return   arr.reduce((a,b) => ({ ...a, [b[key]]: b }), {})
+  }
+  console.log(toObject([{ id: '1', name: 'Alpha', gender: 'Male' }, { id: '2', name: 'Bravo', gender: 'Male' }, { id: '3', name: 'Charlie', gender: 'Female' },],'id'))
+</script>
+</body>
+</html>

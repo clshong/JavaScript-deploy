@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>按对象数组的属性计数</title>
+</head>
+<body>
+<script>
+  const countBy = (arr, prop) => arr.reduce((prev, curr) => ((prev[curr[prop]] = ++prev[curr[prop]] || 1), prev), {})
+  console.log(countBy([
+            { branch: 'audi', model: 'q8', year: '2019' },
+            { branch: 'audi', model: 'rs7', year: '2020' },
+            { branch: 'ford', model: 'mustang', year: '2019' },
+            { branch: 'ford', model: 'explorer', year: '2020' },
+            { branch: 'bmw', model: 'x7', year: '2020' },
+          ],
+          'branch'))
+</script>
+</body>
+</html>

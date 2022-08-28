@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>将字符串数组转换为数字</title>
+</head>
+<body>
+<script>
+  const toNumbers = function (arr) {
+    //强制转换
+    // return arr.map(Number)
+    return arr.map(v => +v)
+  }
+  console.log(toNumbers(['1','2',3]))
+</script>
+</body>
+</html>
