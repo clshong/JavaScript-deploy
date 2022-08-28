@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>值转数组</title>
+</head>
+<body>
+<script>
+    //支持对象、布尔值、数字类型、字符类型
+    function fun(...value){
+        if(Array.isArray(value)) return value
+        else return [value]
+        //简化 return   Array.isArray(value) ? value : [value]
+    }
+
+    console.log(fun({},{a:1}))
+</script>
+</body>
+</html>
